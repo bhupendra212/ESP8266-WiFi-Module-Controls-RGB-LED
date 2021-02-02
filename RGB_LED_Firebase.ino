@@ -8,8 +8,8 @@
 #define WIFI_SSID "ENTER_YOUR_WIFI_SSID"
 #define WIFI_PASSWORD "ENTER_YOUR_WIFI_PASSWORD"
 // Setting RGB pin output
-#define LED D0
-#define LED D1
+#define LED D6
+#define LED D5
 #define LED D2
 // Declaring LED_STATUS = 0 means LED is OFF 
 int LED_STATUS = 0;
@@ -19,8 +19,8 @@ int BLUE;
 
 void setup() {
   // pinMode function is used to configure a specific pin to behave as an input or an output
-  pinMode(D0, OUTPUT);
-  pinMode(D1, OUTPUT);
+  pinMode(D6, OUTPUT);
+  pinMode(D5, OUTPUT);
   pinMode(D2, OUTPUT);
   Serial.begin(9600);
   // Connecting to wifi.
@@ -40,9 +40,9 @@ void setup() {
 
 void RGB_color(int red_light_value, int green_light_value, int blue_light_value) {
   // analogWrite function is used to pass values to specific pin
-  // In our example it will pass RGB value to D0, D1 & D2 pins respectively
-  analogWrite(D0, red_light_value);
-  analogWrite(D1, green_light_value);
+  // In our example it will pass RGB value to D6, D5 & D2 pins respectively
+  analogWrite(D6, red_light_value);
+  analogWrite(D5, green_light_value);
   analogWrite(D2, blue_light_value);
 }
 
